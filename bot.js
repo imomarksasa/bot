@@ -93,4 +93,19 @@ client.on('ready', () => {
   client.user.setGame(`Enjoy :)`,'https://www.twitch.tv/v5bz');
 });
 
+client.on('guildMemberAdd', member => {
+    var embed = new Discord.RichEmbed()
+    .setAuthor(member.user.username, member.user.avatarURL)
+    .setThumbnail(member.user.avatarURL)
+    .setTitle(`عضو جديد`)
+    .setDescription(`اهلا بك في السيرفر منور :heart:`)
+    .addField(' :bust_in_silhouette:  انت رقم',`**[ ${member.guild.memberCount} ]**`,true)
+    .setColor('RED')
+    .setFooter('GhostGamers', 'https://cdn.discordapp.com/attachments/437020575463112705/437944895316164610/image.png')
+
+var channel =member.guild.channels.find('name', 'public-chat')
+if (!channel) return;
+channel.send({embed : embed});
+});
+
 client.login(process.env.BOT_TOKEN);
