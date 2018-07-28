@@ -106,7 +106,7 @@ m.sendMessage(args)
 
 
 
-```css
+
 client.on('ready', function(){
     var ms = 10000 ;
     var setGame = [`+help ON ${client.guilds.size} Servers`,`+help ${client.users.size} Users`];
