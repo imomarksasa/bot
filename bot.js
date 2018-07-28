@@ -133,7 +133,7 @@ client.on('guildMemberAdd', member => {
     .setDescription(`اهلا بك في السيرفر منور :heart:`)
     .addField(' :bust_in_silhouette:  انت رقم',`**[ ${member.guild.memberCount} ]**`,true)
     .setColor('RED')
-    .setFooter('GhostGamers', 'https://cdn.discordapp.com/attachments/437020575463112705/437944895316164610/image.png')
+    .setFooter('GhostGamers', 'https://images-ext-2.discordapp.net/external/isSXO_JfjdAVla24z1lzOgnoiCHzALglHXEZ70kmMvk/https/cdn.pg.sa/OD53Wjr9p0.gif')
 
 var channel =member.guild.channels.find('name', 'public-chat')
 if (!channel) return;
