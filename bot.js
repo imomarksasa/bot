@@ -109,7 +109,7 @@ m.sendMessage(args)
 
 client.on('ready', function(){
     var ms = 10000 ;
-    var setGame = [`+help ON ${client.guilds.size} Servers`,`+help ${client.users.size} Users`];
+    var setGame = [`Bot ON ${client.guilds.size} Servers`,`In Server ${client.users.size} Users`];
     var i = -1;
     var j = 0;
     setInterval(function (){
