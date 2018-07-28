@@ -11,6 +11,14 @@ client.on('message', message => {
       }
 });
 
+client.on('voiceStateUpdate', (old, now) => {
+  const channel = client.channels.get('472875486700240906');
+  const currentSize = channel.guild.members.filter(m => m.voiceChannel).size;
+  const size = channel.name.match(/\[\s(\d+)\s\]/);
+  if (!size) return channel.setName(`Voice Online: ${currentSize}`);
+  if (currentSize !== size) channel.setName(`Voice Online: ${currentSize}`);
+});
+
 client.on('message', message => {
     if (message.content.startsWith("رابط")) {
 
@@ -98,9 +106,10 @@ m.sendMessage(args)
 
 
 
+```css
 client.on('ready', function(){
-    var ms = 1000 ;
-    var setGame = [`WelCome `,` To`,`Ghost`,`Community`];
+    var ms = 10000 ;
+    var setGame = [`+help ON ${client.guilds.size} Servers`,`+help ${client.users.size} Users`];
     var i = -1;
     var j = 0;
     setInterval(function (){
@@ -111,8 +120,8 @@ client.on('ready', function(){
             j = -1;
         }
         i = i+j;
-        client.user.setGame(setGame[i],`http://www.twitch.tv/idk`);
-    }, ms);1000
+        client.user.setGame(setGame[i],`http://www.twitch.tv/KiNg66S`);
+    }, ms);
 
 });
 
