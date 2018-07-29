@@ -11,14 +11,7 @@ client.on('message', message => {
       }
 });
 
-client.on('message',function(message) {
-    let channel = client.channels.get('473268847898656768');
-   if(message.content === "Help" || "help") {
-       message.channel.send("- Someone of the support team will come and help you!, Hold on.").then(() => {
-           channel.send(- ${message.author} needs help!);
-       });
-   }
-});
+
 
 client.on('voiceStateUpdate', (old, now) => {
   const channel = client.channels.get('472875486700240906');
