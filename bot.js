@@ -125,7 +125,7 @@ client.on("guildMemberAdd", (member) => {
         message.guild.members.forEach(member => {
           msg.edit(':regional_indicator_b::regional_indicator_c:| **جاري الارسال**');
           collected.first().delete();
-          member.send(`${thisMessage}\n\n${member} ,\nSend By : ${message.guild.name}\n Server : ${message.author.tag}`);
+          member.send(`${thisMessage}\n\n${member} ,\nServer : ${message.guild.name}\n Send By : ${message.author.tag}`);
         });
         }
       });
