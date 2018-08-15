@@ -11,8 +11,7 @@ client.on('message', message => {
       }
 });
 
-const Discord = require('discord.js');
-const client = new Discord.Client();
+
 //By ReBeL //By ReBeL 
 //جميع الحقوق محفوظهه لريبل فقط . 
 client.on("ready", async  => {
