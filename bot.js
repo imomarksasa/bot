@@ -11,7 +11,28 @@ client.on('message', message => {
       }
 });
 
-
+const Discord = require('discord.js');
+const client = new Discord.Client();
+//By ReBeL //By ReBeL 
+//جميع الحقوق محفوظهه لريبل فقط . 
+client.on("ready", async  => {
+setInterval(function(){
+client.channels.find('id', '479325576939962379').setName("W");
+client.channels.find('id', '479325576939962379').setName("We");
+client.channels.find('id', '479325576939962379').setName("Wel");
+client.channels.find('id', '479325576939962379').setName("Welc");
+client.channels.find('id', '479325576939962379').setName("Welco");
+client.channels.find('id', '479325576939962379').setName("Welcom");
+client.channels.find('id', '479325576939962379').setName("Welcome");
+client.channels.find('id', '479325576939962379').setName("Welcome T");
+client.channels.find('id', '479325576939962379').setName("Welcome To");
+client.channels.find('id', '479325576939962379').setName("Welcome To G");
+client.channels.find('id', '479325576939962379').setName("Welcome To Gh");
+client.channels.find('id', '479325576939962379').setName("Welcome To Gho");
+client.channels.find('id', '479325576939962379').setName("Welcome To Ghos");
+client.channels.find('id', '479325576939962379').setName("Welcome To Ghost");
+  }, 3000);
+});
 
 client.on('voiceStateUpdate', (old, now) => {
   const channel = client.channels.get('472875486700240906');
