@@ -68,7 +68,7 @@ client.on("ready", () => {
 
 
 client.on("guildMemberAdd", (member) => {
-    let channel = member.guild.channels.get("471393414395461634");
+    let channel = member.guild.channels.get("471401805146750977");
     if (!channel) {
         console.log("!the channel id it's not correct");
         return;
