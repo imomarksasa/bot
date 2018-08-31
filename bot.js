@@ -208,7 +208,7 @@ client.on('guildMemberAdd',async member => {
           ctx.clip();
           ctx.drawImage(ava, 36, 21, 260, 260);
            
-          const c = hero.channels.get("471401805146750977");
+          const c = client.channels.get("471401805146750977");
           c.sendFile(canvas.toBuffer());
  
 });
