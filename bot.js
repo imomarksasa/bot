@@ -11,6 +11,31 @@ client.on('message', message => {
       }
 });
 
+client.on('message', msg => {
+  if(msg.content.startsWith('p!sugg')) {
+    if(!msg.channel.guild) return msg.reply('**هذا الامر فقط للسيرفرات**').then(msg => msg.delete(3000));
+    if(!msg.guild.channels.find('name', 'suggetions')) return msg.reply('**الرجاء إضافة روم بإسم (suggestions)**');
+    let args = msg.content.split(" ").slice(1);
+    if(!args[1]) return msg.reply('الرجاء كتابة الاقتراح').then(msg => msg.delete(3000));
+    //غيره على حسب اسم روم الاقتراحات او سوي مثل اسم الروم الموجود هنا
+    if(msg.guild.channels.find('name', 'suggetions')) {
+      //غيره هنا كمان اذا غيرت فوق
+      msg.guild.channels.find('name', 'suggetions').send(`
+                       **﴾ ${msg.member} ﴿ تم الاقتراح من قبل**
+                        **[❖═════ الاقتراح ═══════❖]**
+                                             ﴾ Team / Ghost ﴿
+**__${args.join(" ").split(msg.mentions.members.first()).slice(' ')}__**
+      `)
+      .then(function (message) {
+        message.react('✅')
+        message.react('❌')
+      })
+      }
+    }
+
+});
+
+
 client.on('message',async message => {
     if(message.content.startsWith(prefix + "setVoice")) {
     if(!message.guild.member(message.author).hasPermissions('MANAGE_CHANNELS')) return message.reply('❌ **ليس لديك الصلاحيات الكافية**');
