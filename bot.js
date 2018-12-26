@@ -84,13 +84,7 @@ client.on('message', message => {
 });
 
 
-client.on('voiceStateUpdate', (old, now) => {
-  const channel = client.channels.get('472875486700240906');
-  const currentSize = channel.guild.members.filter(m => m.voiceChannel).size;
-  const size = channel.name.match(/\[\s(\d+)\s\]/);
-  if (!size) return channel.setName(`Voice Online [ ${currentSize} ]`);
-  if (currentSize !== size) channel.setName(`Voice Online [ ${currentSize} ]`);
-});
+
 
 client.on('message', message => {
     if (message.content.startsWith("رابط")) {
