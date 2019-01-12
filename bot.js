@@ -15,6 +15,15 @@ client.on('message', message => {
       }
 });
 
+client.on ("guildBotAdd", member => {
+
+  var channel = member.guild.channels.find("name", "chat");
+  channel.send(`**♯·Welcome To Ghost,Community.. :fire: :two_hearts: 
+  Have Great,Time :rose:**`)
+ 
+           
+          })
+
 client.on("message", message => {
 	var args = message.content.split(' ').slice(1); 
 	var msg = message.content.toLowerCase();
