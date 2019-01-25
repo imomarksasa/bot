@@ -15,14 +15,7 @@ client.on('message', message => {
       }
 });
 
-client.on ("guildBotAdd", member => {
 
-  var channel = member.guild.channels.find("name", "chat");
-  channel.send(`**♯·Welcome To Ghost,Community.. :fire: :two_hearts: 
-  Have Great,Time :rose:**`)
- 
-           
-          })
 
 client.on("message", message => {
 	var args = message.content.split(' ').slice(1); 
@@ -84,7 +77,7 @@ client.on('message', msg => {
       msg.guild.channels.find('name', 'suggetions').send(`
                        **﴾ ${msg.member} ﴿ تم الاقتراح من قبل**
                         **[❖═════ الاقتراح ═══════❖]**
-                                             ﴾ Team / Ghost ﴿
+                                             ﴾ Team / Live Twitch ﴿
 **__${args.join(" ").split(msg.mentions.members.first()).slice(' ')}__**
       `)
       .then(function (message) {
@@ -176,7 +169,7 @@ function forEachObject(obj, func) {
 client.on("ready", () => {
     var guild;
     while (!guild)
-        guild = client.guilds.get("359674601392832512");
+        guild = client.guilds.get("538439173233967124");
     guild.fetchInvites().then((data) => {
         data.forEach((Invite, key, map) => {
             var Inv = Invite.code;
@@ -188,7 +181,7 @@ client.on("ready", () => {
 
 
 client.on("guildMemberAdd", (member) => {
-    let channel = member.guild.channels.get("471401805146750977");
+    let channel = member.guild.channels.get("538445713558994945");
     if (!channel) {
         console.log("!the channel id it's not correct");
         return;
@@ -199,7 +192,7 @@ client.on("guildMemberAdd", (member) => {
     console.log('-');
     var guild;
     while (!guild)
-        guild = client.guilds.get("359674601392832512");
+        guild = client.guilds.get("538439173233967124");
     guild.fetchInvites().then((data) => {
         data.forEach((Invite, key, map) => {
             var Inv = Invite.code;
@@ -292,7 +285,7 @@ client.on('guildMemberAdd', member => {
                      
                                      .addField(' الـسيرفر', `${member.guild.name}`,true)
                                        
-     .setFooter("**Ghost Community**")
+     .setFooter("**Live Twitch**")
         .setTimestamp()
    
       channel.sendEmbed(embed);
